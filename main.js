@@ -1,30 +1,15 @@
-const decoded = document.getElementById("decoded");
-const encoded = document.getElementById("encoded");
-const inputDecode = document.getElementById("inputdecode");
-const inputEncode = document.getElementById("inputencode");
-const decode = document.getElementById("decode");
-const encode = document.getElementById("encode");
+const btn = document.getElementById("submit");
+const input = document.getElementById("code");
 
-decode.addEventListener("click", () => {
-	decoded.innerHTML = decodeText(inputDecode.value);
-});
+const codes = ["POgov22"];
 
-encode.addEventListener("click", () => {
-	encoded.innerHTML = encodeText(inputEncode.value);
-});
-
-function decodeText(text) {
-	let decodedText = "";
-	for (let i = 0; i < text.length; i++) {
-		decodedText += String.fromCharCode(text.charCodeAt(i) - 1);
+btn.addEventListener("click", () => {
+	let text = input.value;
+	console.log(text);
+	if (codes.includes(text)) {
+		window.location.href =
+			"https://sites.google.com/learn.pearlriver.org/moodworldpremium/home";
+	} else {
+		alert("Invalid code");
 	}
-	return decodedText;
-}
-
-function encodeText(text) {
-	let encodedText = "";
-	for (let i = 0; i < text.length; i++) {
-		encodedText += String.fromCharCode(text.charCodeAt(i) + 1);
-	}
-	return encodedText;
-}
+});
