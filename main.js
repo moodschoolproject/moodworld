@@ -2,7 +2,7 @@ const btn = document.getElementById("submit");
 const input = document.getElementById("code");
 const res = document.getElementById("res");
 
-const codes = ["POgov22","LOPEZi78","dDd89"];
+const codes = ["POgov22","LOPEZi78","dDd89","O889sd"];
 
 btn.addEventListener("click", () => {
 	let text = input.value;
